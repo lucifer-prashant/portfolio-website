@@ -20,6 +20,7 @@ import {
 	Braces,
 } from "lucide-react"
 
+import { Analytics } from "@vercel/analytics/react"
 import ContactForm from "./components/ContactForm"
 import { motion } from "framer-motion"
 import { useSectionNavigation } from "./components/useSectionNavigation"
