@@ -20,6 +20,7 @@ import {
 	Braces,
 } from "lucide-react"
 
+import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import ContactForm from "./components/ContactForm"
 import { motion } from "framer-motion"
@@ -53,6 +54,7 @@ const Portfolio = () => {
 
 	return (
 		<>
+			<Analytics />
 			<SpeedInsights />
 			<AnimatedBackground activeSection={activeSection}>
 				<TriangleBackground
