@@ -20,6 +20,7 @@ import {
 	Braces,
 } from "lucide-react"
 
+import NavigationHint from "./components/NavigationHint"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import ContactForm from "./components/ContactForm"
@@ -54,6 +55,7 @@ const Portfolio = () => {
 
 	return (
 		<>
+			<NavigationHint />
 			<Analytics />
 			<SpeedInsights />
 			<AnimatedBackground activeSection={activeSection}>
@@ -140,7 +142,7 @@ const Portfolio = () => {
 							{/* Resume Download Button */}
 							<button
 								onClick={handleDownloadResume}
-								className="fixed top-4 right-4 bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+								className="fixed top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-full shadow-lg z-50 transition-all duration-300 ease-in-out hover:scale-105 flex items-center gap-2 text-white">
 								<Download size={20} />
 								<span className="text-sm">Resume</span>
 							</button>
