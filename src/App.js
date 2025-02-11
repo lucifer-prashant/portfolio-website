@@ -37,12 +37,7 @@ import resumePDF from "./assets/resume.pdf"
 
 const projectId = "q8blyjritc"
 Clarity.init(projectId)
-Clarity.identify("custom-id", {
-	sessionId: "custom-session-id",
-	pageId: "custom-page-id",
-	friendlyName: "friendly-name",
-})
-Clarity.track("button-click", { buttonName: "Resume" })
+
 const Portfolio = () => {
 	const sections = [
 		{ name: "home", icon: Home },
