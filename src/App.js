@@ -20,6 +20,7 @@ import {
 	Braces,
 } from "lucide-react"
 
+import Clarity from "@microsoft/clarity"
 import NavigationHint from "./components/NavigationHint"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
@@ -34,6 +35,14 @@ import GameSection from "./components/GameSection"
 import ProjectSection from "./components/ProjectSection"
 import resumePDF from "./assets/resume.pdf"
 
+const projectId = "q8blyjritc"
+Clarity.init(projectId)
+Clarity.identify("custom-id", {
+	sessionId: "custom-session-id",
+	pageId: "custom-page-id",
+	friendlyName: "friendly-name",
+})
+Clarity.track("button-click", { buttonName: "Resume" })
 const Portfolio = () => {
 	const sections = [
 		{ name: "home", icon: Home },
