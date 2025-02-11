@@ -10,6 +10,14 @@ const ProjectSection = () => {
 			githubLink: "https://github.com/lucifer-prashant/DuplicateFileCleaner",
 			image: "https://i.imghippo.com/files/bjba9027v.png",
 		},
+		{
+			name: "Visual Algorithm Solver",
+			description: "An interactive visualization of sorting algorithms",
+			technologies: ["React", "JavaScript", "CSS"],
+			githubLink: "https://github.com/lucifer-prashant/sorting-visualizer",
+			liveLink: "https://visuasort.vercel.app/",
+			image: "https://i.imghippo.com/files/KLqM6487wkI.jpg",
+		},
 	]
 
 	return (
@@ -26,7 +34,6 @@ const ProjectSection = () => {
 								<img
 									src={project.image}
 									alt={project.name}
-									// className="w-400 h-48 mb-4 rounded-lg object-cover"
 									className="mb-4 rounded-lg"
 									style={{ width: "100%", height: "200px", objectFit: "cover" }}
 								/>
@@ -40,7 +47,7 @@ const ProjectSection = () => {
 										</span>
 									))}
 								</div>
-								<div>
+								<div className="flex gap-4">
 									<a
 										href={project.githubLink}
 										target="_blank"
@@ -48,6 +55,15 @@ const ProjectSection = () => {
 										rel="noreferrer">
 										<Github className="mr-2" /> GitHub
 									</a>
+									{project.liveLink && (
+										<a
+											href={project.liveLink}
+											target="_blank"
+											className="flex items-center justify-center bg-green-600 px-4 py-2 rounded hover:bg-green-700"
+											rel="noreferrer">
+											Live Demo
+										</a>
+									)}
 								</div>
 							</div>
 						))}
