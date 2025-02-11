@@ -20,12 +20,12 @@ import {
 	Braces,
 } from "lucide-react"
 
-import Clarity from "@microsoft/clarity"
 import NavigationHint from "./components/NavigationHint"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import ContactForm from "./components/ContactForm"
 import { motion } from "framer-motion"
+import { useEffect } from "react"
 import { useSectionNavigation } from "./components/useSectionNavigation"
 import AnimatedBackground from "./components/AnimatedBackground"
 import { ThemeToggle, SocialTooltip } from "./components/ThemeToggle"
@@ -36,9 +36,24 @@ import ProjectSection from "./components/ProjectSection"
 import resumePDF from "./assets/resume.pdf"
 
 const projectId = "q8blyjritc"
-Clarity.init(projectId)
 
 const Portfolio = () => {
+	useEffect(() => {
+		// First check if we're in the browser
+		if (typeof window !== "undefined") {
+			// Add the Clarity script
+			const script = document.createElement("script")
+			script.type = "text/javascript"
+			script.innerHTML = `
+						(function(c,l,a,r,i,t,y){
+								c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+								t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+								y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+						})(window, document, "clarity", "script", "${projectId}");
+				`
+			document.head.appendChild(script)
+		}
+	}, [])
 	const sections = [
 		{ name: "home", icon: Home },
 		{ name: "projects", icon: FolderKanban },
