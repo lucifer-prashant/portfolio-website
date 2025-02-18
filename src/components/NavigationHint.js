@@ -38,7 +38,7 @@ const NavigationHint = () => {
 					}`}
 				/>
 				<span className="text-lg font-bold tracking-wide">
-					USE ARROWS TO NAVIGATE
+					Navigate using the left and right arrows on your keyboard!
 				</span>
 				<ArrowRight
 					className={`w-5 h-5 transition-transform duration-300 ${
