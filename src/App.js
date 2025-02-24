@@ -276,21 +276,21 @@ const Portfolio = () => {
 												Kalinga Institute of Industrial Technology
 											</div>
 											<div className="text-blue-400">Computer Science</div>
-											<div className="text-gray-400">CGPA: 8.72</div>
+											{/* <div className="text-gray-400">CGPA: 8.72</div> */}
 										</li>
 										<li className="border-l-2 border-blue-400 pl-4">
 											<div className="font-semibold text-base">
 												Hem Sheela Model School, Durgapur
 											</div>
 											<div className="text-blue-400">Class XII</div>
-											<div className="text-gray-400">Aggregate: 94.7%</div>
+											{/* <div className="text-gray-400">Aggregate: 94.7%</div> */}
 										</li>
 										<li className="border-l-2 border-blue-400 pl-4">
 											<div className="font-semibold text-base">
 												St. Xavier's School, Durgapur
 											</div>
 											<div className="text-blue-400">Class X</div>
-											<div className="text-gray-400">Aggregate: 95.3%</div>
+											{/* <div className="text-gray-400">Aggregate: 95.3%</div> */}
 										</li>
 									</ul>
 								</div>
